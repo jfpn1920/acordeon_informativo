@@ -39,9 +39,9 @@ body {
     line-height: 1.6;
     color: #64748b;
 }
-/*---------------*/
-/*--|controles|--*/
-/*---------------*/
+/*----------------------*/
+/*--|estilo_controles|--*/
+/*----------------------*/
 .controles_acordeon_informativo {
     display: flex;
     justify-content: center;
@@ -68,9 +68,9 @@ body {
 .boton_secundario:hover {
     background: #475569;
 }
-/*--------------*/
-/*--|contador|--*/
-/*--------------*/
+/*---------------------*/
+/*--|estilo_contador|--*/
+/*---------------------*/
 .contador_acordeon_informativo {
     margin-bottom: 20px;
     padding: 10px;
@@ -80,9 +80,75 @@ body {
     font-size: 14px;
     text-align: center;
 }
-/*------------------------*/
-/*--|bloque_de_sesiones|--*/
-/*------------------------*/
+/*-------------------------------------*/
+/*--|estilo_formulario_nueva_seccion|--*/
+/*-------------------------------------*/
+.formulario_acordeon_informativo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+.titulo_formulario_acordeon {
+    margin-bottom: 3px;
+    color: #172554;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.campo_acordeon_informativo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.campo_acordeon_informativo label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: bold;
+}
+.campo_acordeon_informativo input, .campo_acordeon_informativo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.campo_acordeon_informativo input {
+    min-height: 42px;
+}
+.campo_acordeon_informativo textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.6;
+}
+.campo_acordeon_informativo input::placeholder, .campo_acordeon_informativo textarea::placeholder {
+    color: #94a3b8;
+}
+.campo_acordeon_informativo input:focus, .campo_acordeon_informativo textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.formulario_acordeon_informativo .boton_control_acordeon {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.formulario_acordeon_informativo .boton_control_acordeon i {
+    font-size: 13px;
+}
+/*-------------------------------*/
+/*--|estilo_bloque_de_sesiones|--*/
+/*-------------------------------*/
 .acordeon_informativo {
     display: flex;
     flex-direction: column;
@@ -114,10 +180,11 @@ body {
 }
 .icono_acordeon_informativo {
     display: flex;
-    justify-content: ceter;
+    justify-content: center;
     align-items: center;
     width: 25px;
     height: 25px;
+    flex-shrink: 0;
     font-size: 22px;
     transition: transform 0.3s ease;
 }
@@ -145,6 +212,41 @@ body {
     transform: rotate(45deg);
 }
 .boton_acordeon_informativo:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 2px;
+}
+.encabezado_item_acordeon {
+    display: flex;
+    align-items: stretch;
+    background: #172554;
+}
+.encabezado_item_acordeon .boton_acordeon_informativo {
+    flex: 1;
+    min-width: 0;
+}
+/*-----------------------------------*/
+/*--|estilo_boton_eliminar_seccion|--*/
+/*-----------------------------------*/
+.boton_eliminar_seccion {
+    align-self: center;
+    flex-shrink: 0;
+    margin: 0 10px;
+    padding: 9px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 7px;
+    background: #991b1b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.boton_eliminar_seccion:hover {
+    background: #7f1d1d;
+    transform: translateY(-1px);
+}
+.boton_eliminar_seccion:focus-visible {
     outline: 3px solid #60a5fa;
     outline-offset: 2px;
 }

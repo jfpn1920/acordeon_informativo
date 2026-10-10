@@ -21,7 +21,7 @@
         <!--|controles|-->
         <!--------------->
         <div class="controles_acordeon_informativo">
-            <button type="button" id="boton_abrir_todos" class="boton_control_acordeon">Abrir todos </button>
+            <button type="button" id="boton_abrir_todos" class="boton_control_acordeon">Abrir todos</button>
             <button type="button" id="boton_cerrar_todos" class="boton_control_acordeon boton_secundario">Cerrar todos</button>
         </div>
         <!-------------->
@@ -30,6 +30,21 @@
         <div class="contador_acordeon_informativo" id="contador_secciones">
             Secciones abiertas: 0
         </div>
+        <!------------------------------>
+        <!--|formulario_nueva_seccion|-->
+        <!------------------------------>
+        <form class="formulario_acordeon_informativo" id="formulario_nueva_seccion" action="acordeon_informativo.php" method="POST">
+            <h2 class="titulo_formulario_acordeon">Añadir nueva sección</h2>
+            <div class="campo_acordeon_informativo">
+                <label for="titulo_nueva_seccion">Título de la sección</label>
+                <input type="text" id="titulo_nueva_seccion" name="titulo" placeholder="Ej. ¿Qué es React?" maxlength="100" required>
+            </div>
+            <div class="campo_acordeon_informativo">
+                <label for="descripcion_nueva_seccion">Descripción</label>
+                <textarea id="descripcion_nueva_seccion" name="descripcion" placeholder="Escribe la información de esta sección..." rows="4" maxlength="2000" required></textarea>
+            </div>
+            <button type="submit" class="boton_control_acordeon"><i class="fa-solid fa-plus" aria-hidden="true"></i>Añadir sección</button>
+        </form>
         <!------------------------>
         <!--|bloque_de_sesiones|-->
         <!------------------------>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="acordeon_informativo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="acordeon_informativo.js" defer></script>
+</head>
+<body>
+    <!----------------------------------------->
+    <!--|estructuracion_acordeon_informativo|-->
+    <!----------------------------------------->
+    <main class="contenedor_acordeon_informativo">
+        <header class="encabezado_acordeon_informativo">
+            <h1 class="titulo_acordeon_informativo">Acordeón Informativo</h1>
+            <p class="descripcion_acordeon_informativo">Explora cada sección para conocer información sobre desarrollo web.</p>
+        </header>
+        <!--------------->
+        <!--|controles|-->
+        <!--------------->
+        <div class="controles_acordeon_informativo">
+            <button type="button" id="boton_abrir_todos" class="boton_control_acordeon">Abrir todos</button>
+            <button type="button" id="boton_cerrar_todos" class="boton_control_acordeon boton_secundario">Cerrar todos</button>
+        </div>
+        <!-------------->
+        <!--|contador|-->
+        <!-------------->
+        <div class="contador_acordeon_informativo" id="contador_secciones">
+            Secciones abiertas: 0
+        </div>
+        <!------------------------------>
+        <!--|formulario_nueva_seccion|-->
+        <!------------------------------>
+        <form class="formulario_acordeon_informativo" id="formulario_nueva_seccion">
+            <h2 class="titulo_formulario_acordeon">Añadir nueva sección</h2>
+            <div class="campo_acordeon_informativo">
+                <label for="titulo_nueva_seccion">Título de la sección</label>
+                <input type="text" id="titulo_nueva_seccion" name="titulo" placeholder="Ej. ¿Qué es React?" maxlength="100" required>
+            </div>
+            <div class="campo_acordeon_informativo">
+                <label for="descripcion_nueva_seccion">Descripción</label>
+                <textarea id="descripcion_nueva_seccion" name="descripcion" placeholder="Escribe la información de esta sección..." rows="4" maxlength="2000" required></textarea>
+            </div>
+            <button type="submit" class="boton_control_acordeon"><i class="fa-solid fa-plus" aria-hidden="true"></i>Añadir sección</button>
+        </form>
+        <!------------------------>
+        <!--|bloque_de_sesiones|-->
+        <!------------------------>
+        <section class="acordeon_informativo">
+            <article class="item_acordeon_informativo">
+                <button type="button" class="boton_acordeon_informativo" aria-expanded="false">
+                    <span>¿Qué es HTML?</span>
+                    <span class="icono_acordeon_informativo">+</span>
+                </button>
+                <div class="contenido_acordeon_informativo">
+                    <p>HTML es el lenguaje utilizado para estructurar el contenido de una página web.</p>
+                    <p>Permite crear títulos, párrafos, imágenes, enlaces, formularios y diferentes elementos de una página.</p>
+                </div>
+            </article>
+            <article class="item_acordeon_informativo">
+                <button type="button" class="boton_acordeon_informativo" aria-expanded="false">
+                    <span>¿Qué es CSS?</span>
+                    <span class="icono_acordeon_informativo">+</span>
+                </button>
+                <div class="contenido_acordeon_informativo">
+                    <p>CSS es el lenguaje utilizado para diseñar y presentar visualmente los elementos de una página web.</p>
+                    <p>Permite trabajar con colores, tamaños, espacios, posiciones, animaciones y diseños responsive.</p>
+                </div>
+            </article>
+            <article class="item_acordeon_informativo">
+                <button type="button" class="boton_acordeon_informativo" aria-expanded="false">
+                    <span>¿Qué es JavaScript?</span>
+                    <span class="icono_acordeon_informativo">+</span>
+                </button>
+                <div class="contenido_acordeon_informativo">
+                    <p>JavaScript es un lenguaje que permite agregar interactividad a las páginas web.</p>
+                    <p>Puede responder a eventos, modificar elementos HTML y actualizar información dinámicamente.</p>
+                </div>
+            </article>
+            <article class="item_acordeon_informativo">
+                <button type="button" class="boton_acordeon_informativo" aria-expanded="false">
+                    <span>¿Qué es Frontend?</span>
+                    <span class="icono_acordeon_informativo">+</span>
+                </button>
+                <div class="contenido_acordeon_informativo">
+                    <p>El frontend corresponde a la parte de una aplicación web con la que interactúa directamente el usuario.</p>
+                    <p>HTML, CSS y JavaScript son algunas de las tecnologías fundamentales utilizadas en frontend.</p>
+                </div>
+            </article>
+            <article class="item_acordeon_informativo">
+                <button type="button" class="boton_acordeon_informativo" aria-expanded="false">
+                    <span>¿Qué es Responsive Design?</span>
+                    <span class="icono_acordeon_informativo">+</span>
+                </button>
+                <div class="contenido_acordeon_informativo">
+                    <p>El diseño responsive permite que una página web se adapte a diferentes tamaños de pantalla.</p>
+                    <p>De esta manera, el contenido puede visualizarse correctamente en móviles, tablets y computadoras.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
